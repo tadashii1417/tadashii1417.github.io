@@ -1,0 +1,2327 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Abel|Sacramento|Roboto:300,500,900");
+
+/*this is the first mixin i've made */
+
+@import url("https://fonts.googleapis.com/css?family=Abel|Sacramento|Roboto:100,500");
+#mushroom {
+  transform: rotate(45deg);
+  box-shadow: 0 0 0px 15px rgba(51, 133, 255, 0.5), 0 0 0px 30px rgba(245, 64, 49, 0.35), 0 0 0px 45px rgba(255, 219, 95, 0.15);
+  background: #ccc;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  width: 50%;
+}
+
+.message,
+.message2 {
+  display: none;
+  color: #4d4d4d;
+  position: absolute;
+  top: 36px;
+  line-height: 95%;
+  margin-left: -22px !important;
+  font-size: 8pt !important;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 3px;
+  white-space: nowrap;
+  mix-blend-mode: color-burn;
+  padding: 0px 5px;
+}
+
+
+/* removes google's blue outline on hover*/
+
+input:focus {
+  outline: 0;
+}
+
+p.message,
+p.message2 {
+  font-size: 8pt !important;
+  font-family: abel;
+  text-align: center;
+}
+
+#mushroom+.message {
+  display: block !important;
+  z-index: 10;
+}
+
+#wiggle+.message2 {
+  display: block !important;
+  z-index: 10;
+}
+
+.gradient1 {
+  mix-blend-mode: lighten;
+  display: block;
+  position: relative;
+  color: #000;
+  background: #fff;
+  mix-blend-mode: multiply;
+}
+
+.gradient1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  bottom: 0;
+  left: 0px;
+  mix-blend-mode: lighten;
+  background: linear-gradient(300deg, #FFCE54, #A0D468, #1464ab, #db0768, #FFCE54);
+  pointer-events: none;
+}
+
+body {
+  background-color: #fff;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.8em;
+  height: 95%;
+}
+
+h1 {
+  font-family: Sacramento;
+  font-size: 25pt;
+  line-height: 90%;
+  color: #f54031;
+  font-weight: normal;
+  margin: 2px;
+  margin-bottom: 15px;
+}
+
+em {
+  color: #db0768;
+}
+
+strong>u {
+  color: #de4044;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+em strong {
+  color: #3385ff;
+}
+
+h1 strong {
+  color: #3385ff;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 1.3em;
+}
+
+wow {
+  color: #A0D468;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+a,
+a:visited {
+  color: #000;
+  margin: 5px;
+}
+
+a:hover {
+  color: #f00;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  margin: 30px;
+  float: left;
+}
+
+.wrapper {
+  display: table;
+  overflow: hidden;
+  height: 95%;
+}
+
+.header {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  height: 10px;
+  padding: 0px;
+  background-color: #fff;
+  opacity: .76;
+  text-align: center;
+  mix-blend-mode: normal;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.center {
+  position: absolute;
+  left: -20px;
+  top: 40px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: .76;
+  text-align: center;
+}
+
+.signature {
+  position: absolute;
+  right: 0;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: .76;
+  text-align: center;
+}
+
+.gift {
+  width: 300px;
+  height: 300px;
+  margin: 15% auto;
+  position: fixed;
+  border: 3px rgba(255, 255, 255, 0.99) solid;
+  border-radius: 12px;
+  right: 0;
+  left: 0;
+  mix-blend-mode: normal;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  opacity: .95;
+  z-index: 200;
+  vertical-align: top;
+}
+
+.gift2 {
+  width: 300px;
+  display: inline-block;
+  margin-top: -70px;
+  mix-blend-mode: overlay;
+  opacity: .50;
+  z-index: -3;
+}
+
+.gift2 svg {
+  width: 100% !important;
+  margin-left: 20%;
+  margin-right: 20%;
+  z-index: -3;
+}
+
+#msg {
+  color: black;
+  mix-blend-mode: normal;
+  margin-bottom: 0px;
+  z-index: -3;
+}
+
+pre,
+code {
+  font-family: Consolas, courier, monotype;
+  font-size: 9pt;
+}
+
+mark {
+  background: #fff;
+  line-height: 130%;
+  border-radius: 2px;
+  z-index: 1;
+  padding: 2px;
+}
+
+blockquote {
+  font-size: 13pt;
+  line-height: 105%;
+  font-weight: normal;
+  font-family: abel;
+  color: black;
+  letter-spacing: .5pt;
+  padding: 0px 0px 2px 14px;
+  display: block;
+  position: absolute;
+  margin-top: 0px;
+  margin: 7px;
+  height: 150px;
+  overflow-y: scroll;
+}
+
+blockquote::before {
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f54031;
+  margin: 0px;
+  position: absolute;
+  left: -10px;
+  position: relative;
+  top: 10px;
+  z-index: 100;
+}
+
+.jn {
+  font-family: Roboto;
+  font-size: 90%;
+  line-height: 95%;
+  margin-top: -75%;
+  padding: 5px !important;
+  font-weight: 300;
+  display: fixed;
+  vertical-align: top;
+  text-align: left;
+}
+
+.gift .footer {
+  background: linear-gradient(140deg, #3385ff, #47d147, #ffb443);
+  text-align: center;
+  height: 5px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  mix-blend-mode: hard-light;
+  opacity: .9;
+  vertical-align: middle;
+  padding: 0px;
+}
+
+.gift:before,
+.gift:after {
+  content: "";
+  width: 45px;
+  height: 45px;
+  border: 14px solid #f54031;
+  border-radius: 50% 50% 0% 50%;
+  position: absolute;
+  margin-top: -4px;
+  opacity: .8;
+  mix-blend-mode: overlay;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-100%, -100%, 0) skew(10deg, 10deg);
+}
+
+.gift::after {
+  border-radius: 50% 50% 50% 0;
+  transform: translate3d(0, -100%, 0) skew(-10deg, -10deg);
+}
+
+.balloons {
+  background-color: #ddd;
+  height: 98%;
+  width: 98%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.balloon {
+  display: inline-block;
+  opacity: .68;
+  color: #000;
+  text-align: center;
+  width: 80px;
+  height: 100px;
+  background: #799ed2;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+  position: relative;
+  box-shadow: inset -5px -5px 0 rgba(0, 0, 0, 0.07);
+  margin: 40px;
+  mix-blend-mode: luminosity;
+}
+
+.balloon:before {
+  content: "▲";
+  font-size: 17px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+}
+
+.balloon{
+  mix-blend-mode: hard-light;
+}
+
+.balloon:after {
+  mix-blend-mode: normal !important;
+  pointer-events: none;
+}
+
+.balloon:after {
+  display: inline-block;
+  top: 104px;
+  position: absolute;
+  height: 150px;
+  width: 1px;
+  margin: 0 auto;
+  content: "";
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.balloon0 {
+  background-color: #ffdb5f;
+  left: 1%;
+  animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation: flyingBalloon 11s -92s linear infinite;
+  -moz-animation: flyingBalloon 11s -92s linear infinite;
+  -ms-animation: flyingBalloon 11s -92s linear infinite;
+  -o-animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon0:before {
+  color: #ffdb5f;
+}
+
+.balloon1 {
+  background-color: #f1f7bb;
+  left: 1%;
+  animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation: flyingBalloon 8s -92s linear infinite;
+  -moz-animation: flyingBalloon 8s -92s linear infinite;
+  -ms-animation: flyingBalloon 8s -92s linear infinite;
+  -o-animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon1:before {
+  color: #f1f7bb;
+}
+
+.balloon2 {
+  background-color: #de4044;
+  left: 6%;
+  animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation: flyingBalloon 15s -92s linear infinite;
+  -moz-animation: flyingBalloon 15s -92s linear infinite;
+  -ms-animation: flyingBalloon 15s -92s linear infinite;
+  -o-animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon2:before {
+  color: #de4044;
+}
+
+.balloon3 {
+  background-color: #ffdb5f;
+  left: 6%;
+  animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation: flyingBalloon 14s -92s linear infinite;
+  -moz-animation: flyingBalloon 14s -92s linear infinite;
+  -ms-animation: flyingBalloon 14s -92s linear infinite;
+  -o-animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon3:before {
+  color: #ffdb5f;
+}
+
+.balloon4 {
+  background-color: #4A89DC;
+  left: 2%;
+  animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation: flyingBalloon 12s -92s linear infinite;
+  -moz-animation: flyingBalloon 12s -92s linear infinite;
+  -ms-animation: flyingBalloon 12s -92s linear infinite;
+  -o-animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon4:before {
+  color: #4A89DC;
+}
+
+.balloon5 {
+  background-color: #de4044;
+  left: 2%;
+  animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation: flyingBalloon 16s -92s linear infinite;
+  -moz-animation: flyingBalloon 16s -92s linear infinite;
+  -ms-animation: flyingBalloon 16s -92s linear infinite;
+  -o-animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon5:before {
+  color: #de4044;
+}
+
+.balloon6 {
+  background-color: #ffdb5f;
+  left: 10%;
+  animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation: flyingBalloon 15s -92s linear infinite;
+  -moz-animation: flyingBalloon 15s -92s linear infinite;
+  -ms-animation: flyingBalloon 15s -92s linear infinite;
+  -o-animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon6:before {
+  color: #ffdb5f;
+}
+
+.balloon7 {
+  background-color: #ffdb5f;
+  left: 18%;
+  animation: flyingBalloon 18s -92s linear infinite;
+  -webkit-animation: flyingBalloon 18s -92s linear infinite;
+  -moz-animation: flyingBalloon 18s -92s linear infinite;
+  -ms-animation: flyingBalloon 18s -92s linear infinite;
+  -o-animation: flyingBalloon 18s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon7:before {
+  color: #ffdb5f;
+}
+
+.balloon8 {
+  background-color: #ffdb5f;
+  left: 4%;
+  animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation: flyingBalloon 17s -92s linear infinite;
+  -moz-animation: flyingBalloon 17s -92s linear infinite;
+  -ms-animation: flyingBalloon 17s -92s linear infinite;
+  -o-animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon8:before {
+  color: #ffdb5f;
+}
+
+.balloon9 {
+  background-color: #ffdb5f;
+  left: 14%;
+  animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation: flyingBalloon 9s -92s linear infinite;
+  -moz-animation: flyingBalloon 9s -92s linear infinite;
+  -ms-animation: flyingBalloon 9s -92s linear infinite;
+  -o-animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon9:before {
+  color: #ffdb5f;
+}
+
+.balloon10 {
+  background-color: #de4044;
+  left: 6%;
+  animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation: flyingBalloon 13s -92s linear infinite;
+  -moz-animation: flyingBalloon 13s -92s linear infinite;
+  -ms-animation: flyingBalloon 13s -92s linear infinite;
+  -o-animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon10:before {
+  color: #de4044;
+}
+
+.balloon11 {
+  background-color: #f1f7bb;
+  left: 20%;
+  animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation: flyingBalloon 25s -92s linear infinite;
+  -moz-animation: flyingBalloon 25s -92s linear infinite;
+  -ms-animation: flyingBalloon 25s -92s linear infinite;
+  -o-animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon11:before {
+  color: #f1f7bb;
+}
+
+.balloon12 {
+  background-color: #4A89DC;
+  left: 6%;
+  animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation: flyingBalloon 13s -92s linear infinite;
+  -moz-animation: flyingBalloon 13s -92s linear infinite;
+  -ms-animation: flyingBalloon 13s -92s linear infinite;
+  -o-animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon12:before {
+  color: #4A89DC;
+}
+
+.balloon13 {
+  background-color: #4A89DC;
+  left: 15%;
+  animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation: flyingBalloon 15s -92s linear infinite;
+  -moz-animation: flyingBalloon 15s -92s linear infinite;
+  -ms-animation: flyingBalloon 15s -92s linear infinite;
+  -o-animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon13:before {
+  color: #4A89DC;
+}
+
+.balloon14 {
+  background-color: #de4044;
+  left: 1%;
+  animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation: flyingBalloon 16s -92s linear infinite;
+  -moz-animation: flyingBalloon 16s -92s linear infinite;
+  -ms-animation: flyingBalloon 16s -92s linear infinite;
+  -o-animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon14:before {
+  color: #de4044;
+}
+
+.balloon15 {
+  background-color: #f1f7bb;
+  left: 9%;
+  animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation: flyingBalloon 25s -92s linear infinite;
+  -moz-animation: flyingBalloon 25s -92s linear infinite;
+  -ms-animation: flyingBalloon 25s -92s linear infinite;
+  -o-animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon15:before {
+  color: #f1f7bb;
+}
+
+.balloon16 {
+  background-color: #ffdb5f;
+  left: 15%;
+  animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation: flyingBalloon 7s -92s linear infinite;
+  -moz-animation: flyingBalloon 7s -92s linear infinite;
+  -ms-animation: flyingBalloon 7s -92s linear infinite;
+  -o-animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon16:before {
+  color: #ffdb5f;
+}
+
+.balloon17 {
+  background-color: #ffdb5f;
+  left: 15%;
+  animation: flyingBalloon 18s -92s linear infinite;
+  -webkit-animation: flyingBalloon 18s -92s linear infinite;
+  -moz-animation: flyingBalloon 18s -92s linear infinite;
+  -ms-animation: flyingBalloon 18s -92s linear infinite;
+  -o-animation: flyingBalloon 18s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon17:before {
+  color: #ffdb5f;
+}
+
+.balloon18 {
+  background-color: #de4044;
+  left: 8%;
+  animation: flyingBalloon 24s -92s linear infinite;
+  -webkit-animation: flyingBalloon 24s -92s linear infinite;
+  -moz-animation: flyingBalloon 24s -92s linear infinite;
+  -ms-animation: flyingBalloon 24s -92s linear infinite;
+  -o-animation: flyingBalloon 24s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon18:before {
+  color: #de4044;
+}
+
+.balloon19 {
+  background-color: #4A89DC;
+  left: 7%;
+  animation: flyingBalloon 21s -92s linear infinite;
+  -webkit-animation: flyingBalloon 21s -92s linear infinite;
+  -moz-animation: flyingBalloon 21s -92s linear infinite;
+  -ms-animation: flyingBalloon 21s -92s linear infinite;
+  -o-animation: flyingBalloon 21s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon19:before {
+  color: #4A89DC;
+}
+
+.balloon20 {
+  background-color: #de4044;
+  left: 14%;
+  animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation: flyingBalloon 7s -92s linear infinite;
+  -moz-animation: flyingBalloon 7s -92s linear infinite;
+  -ms-animation: flyingBalloon 7s -92s linear infinite;
+  -o-animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon20:before {
+  color: #de4044;
+}
+
+.balloon21 {
+  background-color: #4A89DC;
+  left: 15%;
+  animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation: flyingBalloon 16s -92s linear infinite;
+  -moz-animation: flyingBalloon 16s -92s linear infinite;
+  -ms-animation: flyingBalloon 16s -92s linear infinite;
+  -o-animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon21:before {
+  color: #4A89DC;
+}
+
+.balloon22 {
+  background-color: #4A89DC;
+  left: 3%;
+  animation: flyingBalloon 20s -92s linear infinite;
+  -webkit-animation: flyingBalloon 20s -92s linear infinite;
+  -moz-animation: flyingBalloon 20s -92s linear infinite;
+  -ms-animation: flyingBalloon 20s -92s linear infinite;
+  -o-animation: flyingBalloon 20s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon22:before {
+  color: #4A89DC;
+}
+
+.balloon23 {
+  background-color: #f1f7bb;
+  left: 13%;
+  animation: flyingBalloon 22s -92s linear infinite;
+  -webkit-animation: flyingBalloon 22s -92s linear infinite;
+  -moz-animation: flyingBalloon 22s -92s linear infinite;
+  -ms-animation: flyingBalloon 22s -92s linear infinite;
+  -o-animation: flyingBalloon 22s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon23:before {
+  color: #f1f7bb;
+}
+
+.balloon24 {
+  background-color: #de4044;
+  left: 1%;
+  animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation: flyingBalloon 13s -92s linear infinite;
+  -moz-animation: flyingBalloon 13s -92s linear infinite;
+  -ms-animation: flyingBalloon 13s -92s linear infinite;
+  -o-animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon24:before {
+  color: #de4044;
+}
+
+.balloon25 {
+  background-color: #4A89DC;
+  left: 18%;
+  animation: flyingBalloon 10s -92s linear infinite;
+  -webkit-animation: flyingBalloon 10s -92s linear infinite;
+  -moz-animation: flyingBalloon 10s -92s linear infinite;
+  -ms-animation: flyingBalloon 10s -92s linear infinite;
+  -o-animation: flyingBalloon 10s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon25:before {
+  color: #4A89DC;
+}
+
+.balloon26 {
+  background-color: #4A89DC;
+  left: 3%;
+  animation: flyingBalloon 22s -92s linear infinite;
+  -webkit-animation: flyingBalloon 22s -92s linear infinite;
+  -moz-animation: flyingBalloon 22s -92s linear infinite;
+  -ms-animation: flyingBalloon 22s -92s linear infinite;
+  -o-animation: flyingBalloon 22s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon26:before {
+  color: #4A89DC;
+}
+
+.balloon27 {
+  background-color: #f1f7bb;
+  left: 12%;
+  animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation: flyingBalloon 14s -92s linear infinite;
+  -moz-animation: flyingBalloon 14s -92s linear infinite;
+  -ms-animation: flyingBalloon 14s -92s linear infinite;
+  -o-animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon27:before {
+  color: #f1f7bb;
+}
+
+.balloon28 {
+  background-color: #de4044;
+  left: 10%;
+  animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation: flyingBalloon 17s -92s linear infinite;
+  -moz-animation: flyingBalloon 17s -92s linear infinite;
+  -ms-animation: flyingBalloon 17s -92s linear infinite;
+  -o-animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon28:before {
+  color: #de4044;
+}
+
+.balloon29 {
+  background-color: #ffdb5f;
+  left: 14%;
+  animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation: flyingBalloon 15s -92s linear infinite;
+  -moz-animation: flyingBalloon 15s -92s linear infinite;
+  -ms-animation: flyingBalloon 15s -92s linear infinite;
+  -o-animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon29:before {
+  color: #ffdb5f;
+}
+
+.balloon30 {
+  background-color: #de4044;
+  left: 1%;
+  animation: flyingBalloon 21s -92s linear infinite;
+  -webkit-animation: flyingBalloon 21s -92s linear infinite;
+  -moz-animation: flyingBalloon 21s -92s linear infinite;
+  -ms-animation: flyingBalloon 21s -92s linear infinite;
+  -o-animation: flyingBalloon 21s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon30:before {
+  color: #de4044;
+}
+
+.balloon31 {
+  background-color: #ffdb5f;
+  left: 11%;
+  animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation: flyingBalloon 12s -92s linear infinite;
+  -moz-animation: flyingBalloon 12s -92s linear infinite;
+  -ms-animation: flyingBalloon 12s -92s linear infinite;
+  -o-animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon31:before {
+  color: #ffdb5f;
+}
+
+.balloon32 {
+  background-color: #ffdb5f;
+  left: 6%;
+  animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation: flyingBalloon 19s -92s linear infinite;
+  -moz-animation: flyingBalloon 19s -92s linear infinite;
+  -ms-animation: flyingBalloon 19s -92s linear infinite;
+  -o-animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon32:before {
+  color: #ffdb5f;
+}
+
+.balloon33 {
+  background-color: #ffdb5f;
+  left: 11%;
+  animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation: flyingBalloon 12s -92s linear infinite;
+  -moz-animation: flyingBalloon 12s -92s linear infinite;
+  -ms-animation: flyingBalloon 12s -92s linear infinite;
+  -o-animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon33:before {
+  color: #ffdb5f;
+}
+
+.balloon34 {
+  background-color: #ffdb5f;
+  left: 7%;
+  animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation: flyingBalloon 12s -92s linear infinite;
+  -moz-animation: flyingBalloon 12s -92s linear infinite;
+  -ms-animation: flyingBalloon 12s -92s linear infinite;
+  -o-animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon34:before {
+  color: #ffdb5f;
+}
+
+.balloon35 {
+  background-color: #4A89DC;
+  left: 3%;
+  animation: flyingBalloon 24s -92s linear infinite;
+  -webkit-animation: flyingBalloon 24s -92s linear infinite;
+  -moz-animation: flyingBalloon 24s -92s linear infinite;
+  -ms-animation: flyingBalloon 24s -92s linear infinite;
+  -o-animation: flyingBalloon 24s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon35:before {
+  color: #4A89DC;
+}
+
+.balloon36 {
+  background-color: #ffdb5f;
+  left: 2%;
+  animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation: flyingBalloon 19s -92s linear infinite;
+  -moz-animation: flyingBalloon 19s -92s linear infinite;
+  -ms-animation: flyingBalloon 19s -92s linear infinite;
+  -o-animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon36:before {
+  color: #ffdb5f;
+}
+
+.balloon37 {
+  background-color: #4A89DC;
+  left: 7%;
+  animation: flyingBalloon 18s -92s linear infinite;
+  -webkit-animation: flyingBalloon 18s -92s linear infinite;
+  -moz-animation: flyingBalloon 18s -92s linear infinite;
+  -ms-animation: flyingBalloon 18s -92s linear infinite;
+  -o-animation: flyingBalloon 18s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon37:before {
+  color: #4A89DC;
+}
+
+.balloon38 {
+  background-color: #f1f7bb;
+  left: 19%;
+  animation: flyingBalloon 10s -92s linear infinite;
+  -webkit-animation: flyingBalloon 10s -92s linear infinite;
+  -moz-animation: flyingBalloon 10s -92s linear infinite;
+  -ms-animation: flyingBalloon 10s -92s linear infinite;
+  -o-animation: flyingBalloon 10s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon38:before {
+  color: #f1f7bb;
+}
+
+.balloon39 {
+  background-color: #de4044;
+  left: 4%;
+  animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation: flyingBalloon 15s -92s linear infinite;
+  -moz-animation: flyingBalloon 15s -92s linear infinite;
+  -ms-animation: flyingBalloon 15s -92s linear infinite;
+  -o-animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon39:before {
+  color: #de4044;
+}
+
+.balloon40 {
+  background-color: #ffdb5f;
+  left: 20%;
+  animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation: flyingBalloon 13s -92s linear infinite;
+  -moz-animation: flyingBalloon 13s -92s linear infinite;
+  -ms-animation: flyingBalloon 13s -92s linear infinite;
+  -o-animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon40:before {
+  color: #ffdb5f;
+}
+
+.balloon41 {
+  background-color: #de4044;
+  left: 17%;
+  animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation: flyingBalloon 17s -92s linear infinite;
+  -moz-animation: flyingBalloon 17s -92s linear infinite;
+  -ms-animation: flyingBalloon 17s -92s linear infinite;
+  -o-animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon41:before {
+  color: #de4044;
+}
+
+.balloon42 {
+  background-color: #4A89DC;
+  left: 6%;
+  animation: flyingBalloon 10s -92s linear infinite;
+  -webkit-animation: flyingBalloon 10s -92s linear infinite;
+  -moz-animation: flyingBalloon 10s -92s linear infinite;
+  -ms-animation: flyingBalloon 10s -92s linear infinite;
+  -o-animation: flyingBalloon 10s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon42:before {
+  color: #4A89DC;
+}
+
+.balloon43 {
+  background-color: #4A89DC;
+  left: 15%;
+  animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation: flyingBalloon 16s -92s linear infinite;
+  -moz-animation: flyingBalloon 16s -92s linear infinite;
+  -ms-animation: flyingBalloon 16s -92s linear infinite;
+  -o-animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon43:before {
+  color: #4A89DC;
+}
+
+.balloon44 {
+  background-color: #de4044;
+  left: 12%;
+  animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation: flyingBalloon 16s -92s linear infinite;
+  -moz-animation: flyingBalloon 16s -92s linear infinite;
+  -ms-animation: flyingBalloon 16s -92s linear infinite;
+  -o-animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon44:before {
+  color: #de4044;
+}
+
+.balloon45 {
+  background-color: #ffdb5f;
+  left: 2%;
+  animation: flyingBalloon 24s -92s linear infinite;
+  -webkit-animation: flyingBalloon 24s -92s linear infinite;
+  -moz-animation: flyingBalloon 24s -92s linear infinite;
+  -ms-animation: flyingBalloon 24s -92s linear infinite;
+  -o-animation: flyingBalloon 24s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon45:before {
+  color: #ffdb5f;
+}
+
+.balloon46 {
+  background-color: #f1f7bb;
+  left: 2%;
+  animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation: flyingBalloon 11s -92s linear infinite;
+  -moz-animation: flyingBalloon 11s -92s linear infinite;
+  -ms-animation: flyingBalloon 11s -92s linear infinite;
+  -o-animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon46:before {
+  color: #f1f7bb;
+}
+
+.balloon47 {
+  background-color: #ffdb5f;
+  left: 4%;
+  animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation: flyingBalloon 11s -92s linear infinite;
+  -moz-animation: flyingBalloon 11s -92s linear infinite;
+  -ms-animation: flyingBalloon 11s -92s linear infinite;
+  -o-animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon47:before {
+  color: #ffdb5f;
+}
+
+.balloon48 {
+  background-color: #ffdb5f;
+  left: 17%;
+  animation: flyingBalloon 21s -92s linear infinite;
+  -webkit-animation: flyingBalloon 21s -92s linear infinite;
+  -moz-animation: flyingBalloon 21s -92s linear infinite;
+  -ms-animation: flyingBalloon 21s -92s linear infinite;
+  -o-animation: flyingBalloon 21s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon48:before {
+  color: #ffdb5f;
+}
+
+.balloon49 {
+  background-color: #4A89DC;
+  left: 14%;
+  animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation: flyingBalloon 7s -92s linear infinite;
+  -moz-animation: flyingBalloon 7s -92s linear infinite;
+  -ms-animation: flyingBalloon 7s -92s linear infinite;
+  -o-animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon49:before {
+  color: #4A89DC;
+}
+
+.balloon50 {
+  background-color: #de4044;
+  left: 3%;
+  animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation: flyingBalloon 19s -92s linear infinite;
+  -moz-animation: flyingBalloon 19s -92s linear infinite;
+  -ms-animation: flyingBalloon 19s -92s linear infinite;
+  -o-animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon50:before {
+  color: #de4044;
+}
+
+.balloon51 {
+  background-color: #ffdb5f;
+  left: 19%;
+  animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation: flyingBalloon 9s -92s linear infinite;
+  -moz-animation: flyingBalloon 9s -92s linear infinite;
+  -ms-animation: flyingBalloon 9s -92s linear infinite;
+  -o-animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon51:before {
+  color: #ffdb5f;
+}
+
+.balloon52 {
+  background-color: #4A89DC;
+  left: 18%;
+  animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation: flyingBalloon 14s -92s linear infinite;
+  -moz-animation: flyingBalloon 14s -92s linear infinite;
+  -ms-animation: flyingBalloon 14s -92s linear infinite;
+  -o-animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon52:before {
+  color: #4A89DC;
+}
+
+.balloon53 {
+  background-color: #ffdb5f;
+  left: 19%;
+  animation: flyingBalloon 21s -92s linear infinite;
+  -webkit-animation: flyingBalloon 21s -92s linear infinite;
+  -moz-animation: flyingBalloon 21s -92s linear infinite;
+  -ms-animation: flyingBalloon 21s -92s linear infinite;
+  -o-animation: flyingBalloon 21s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon53:before {
+  color: #ffdb5f;
+}
+
+.balloon54 {
+  background-color: #de4044;
+  left: 11%;
+  animation: flyingBalloon 20s -92s linear infinite;
+  -webkit-animation: flyingBalloon 20s -92s linear infinite;
+  -moz-animation: flyingBalloon 20s -92s linear infinite;
+  -ms-animation: flyingBalloon 20s -92s linear infinite;
+  -o-animation: flyingBalloon 20s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon54:before {
+  color: #de4044;
+}
+
+.balloon55 {
+  background-color: #de4044;
+  left: 19%;
+  animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation: flyingBalloon 14s -92s linear infinite;
+  -moz-animation: flyingBalloon 14s -92s linear infinite;
+  -ms-animation: flyingBalloon 14s -92s linear infinite;
+  -o-animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon55:before {
+  color: #de4044;
+}
+
+.balloon56 {
+  background-color: #ffdb5f;
+  left: 2%;
+  animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation: flyingBalloon 25s -92s linear infinite;
+  -moz-animation: flyingBalloon 25s -92s linear infinite;
+  -ms-animation: flyingBalloon 25s -92s linear infinite;
+  -o-animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon56:before {
+  color: #ffdb5f;
+}
+
+.balloon57 {
+  background-color: #f1f7bb;
+  left: 4%;
+  animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation: flyingBalloon 25s -92s linear infinite;
+  -moz-animation: flyingBalloon 25s -92s linear infinite;
+  -ms-animation: flyingBalloon 25s -92s linear infinite;
+  -o-animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon57:before {
+  color: #f1f7bb;
+}
+
+.balloon58 {
+  background-color: #4A89DC;
+  left: 14%;
+  animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation: flyingBalloon 11s -92s linear infinite;
+  -moz-animation: flyingBalloon 11s -92s linear infinite;
+  -ms-animation: flyingBalloon 11s -92s linear infinite;
+  -o-animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon58:before {
+  color: #4A89DC;
+}
+
+.balloon59 {
+  background-color: #f1f7bb;
+  left: 13%;
+  animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation: flyingBalloon 12s -92s linear infinite;
+  -moz-animation: flyingBalloon 12s -92s linear infinite;
+  -ms-animation: flyingBalloon 12s -92s linear infinite;
+  -o-animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon59:before {
+  color: #f1f7bb;
+}
+
+.balloon60 {
+  background-color: #4A89DC;
+  left: 15%;
+  animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation: flyingBalloon 9s -92s linear infinite;
+  -moz-animation: flyingBalloon 9s -92s linear infinite;
+  -ms-animation: flyingBalloon 9s -92s linear infinite;
+  -o-animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon60:before {
+  color: #4A89DC;
+}
+
+.balloon61 {
+  background-color: #4A89DC;
+  left: 16%;
+  animation: flyingBalloon 23s -92s linear infinite;
+  -webkit-animation: flyingBalloon 23s -92s linear infinite;
+  -moz-animation: flyingBalloon 23s -92s linear infinite;
+  -ms-animation: flyingBalloon 23s -92s linear infinite;
+  -o-animation: flyingBalloon 23s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon61:before {
+  color: #4A89DC;
+}
+
+.balloon62 {
+  background-color: #de4044;
+  left: 11%;
+  animation: flyingBalloon 20s -92s linear infinite;
+  -webkit-animation: flyingBalloon 20s -92s linear infinite;
+  -moz-animation: flyingBalloon 20s -92s linear infinite;
+  -ms-animation: flyingBalloon 20s -92s linear infinite;
+  -o-animation: flyingBalloon 20s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon62:before {
+  color: #de4044;
+}
+
+.balloon63 {
+  background-color: #4A89DC;
+  left: 2%;
+  animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation: flyingBalloon 9s -92s linear infinite;
+  -moz-animation: flyingBalloon 9s -92s linear infinite;
+  -ms-animation: flyingBalloon 9s -92s linear infinite;
+  -o-animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon63:before {
+  color: #4A89DC;
+}
+
+.balloon64 {
+  background-color: #4A89DC;
+  left: 20%;
+  animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation: flyingBalloon 7s -92s linear infinite;
+  -moz-animation: flyingBalloon 7s -92s linear infinite;
+  -ms-animation: flyingBalloon 7s -92s linear infinite;
+  -o-animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon64:before {
+  color: #4A89DC;
+}
+
+.balloon65 {
+  background-color: #4A89DC;
+  left: 16%;
+  animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation: flyingBalloon 13s -92s linear infinite;
+  -moz-animation: flyingBalloon 13s -92s linear infinite;
+  -ms-animation: flyingBalloon 13s -92s linear infinite;
+  -o-animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon65:before {
+  color: #4A89DC;
+}
+
+.balloon66 {
+  background-color: #f1f7bb;
+  left: 20%;
+  animation: flyingBalloon 22s -92s linear infinite;
+  -webkit-animation: flyingBalloon 22s -92s linear infinite;
+  -moz-animation: flyingBalloon 22s -92s linear infinite;
+  -ms-animation: flyingBalloon 22s -92s linear infinite;
+  -o-animation: flyingBalloon 22s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon66:before {
+  color: #f1f7bb;
+}
+
+.balloon67 {
+  background-color: #de4044;
+  left: 11%;
+  animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation: flyingBalloon 14s -92s linear infinite;
+  -moz-animation: flyingBalloon 14s -92s linear infinite;
+  -ms-animation: flyingBalloon 14s -92s linear infinite;
+  -o-animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon67:before {
+  color: #de4044;
+}
+
+.balloon68 {
+  background-color: #de4044;
+  left: 1%;
+  animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation: flyingBalloon 17s -92s linear infinite;
+  -moz-animation: flyingBalloon 17s -92s linear infinite;
+  -ms-animation: flyingBalloon 17s -92s linear infinite;
+  -o-animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon68:before {
+  color: #de4044;
+}
+
+.balloon69 {
+  background-color: #f1f7bb;
+  left: 6%;
+  animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation: flyingBalloon 25s -92s linear infinite;
+  -moz-animation: flyingBalloon 25s -92s linear infinite;
+  -ms-animation: flyingBalloon 25s -92s linear infinite;
+  -o-animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon69:before {
+  color: #f1f7bb;
+}
+
+.balloon70 {
+  background-color: #ffdb5f;
+  left: 20%;
+  animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation: flyingBalloon 8s -92s linear infinite;
+  -moz-animation: flyingBalloon 8s -92s linear infinite;
+  -ms-animation: flyingBalloon 8s -92s linear infinite;
+  -o-animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon70:before {
+  color: #ffdb5f;
+}
+
+.balloon71 {
+  background-color: #4A89DC;
+  left: 13%;
+  animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation: flyingBalloon 8s -92s linear infinite;
+  -moz-animation: flyingBalloon 8s -92s linear infinite;
+  -ms-animation: flyingBalloon 8s -92s linear infinite;
+  -o-animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon71:before {
+  color: #4A89DC;
+}
+
+.balloon72 {
+  background-color: #ffdb5f;
+  left: 18%;
+  animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation: flyingBalloon 13s -92s linear infinite;
+  -moz-animation: flyingBalloon 13s -92s linear infinite;
+  -ms-animation: flyingBalloon 13s -92s linear infinite;
+  -o-animation: flyingBalloon 13s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon72:before {
+  color: #ffdb5f;
+}
+
+.balloon73 {
+  background-color: #f1f7bb;
+  left: 19%;
+  animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation: flyingBalloon 8s -92s linear infinite;
+  -moz-animation: flyingBalloon 8s -92s linear infinite;
+  -ms-animation: flyingBalloon 8s -92s linear infinite;
+  -o-animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon73:before {
+  color: #f1f7bb;
+}
+
+.balloon74 {
+  background-color: #4A89DC;
+  left: 4%;
+  animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation: flyingBalloon 16s -92s linear infinite;
+  -moz-animation: flyingBalloon 16s -92s linear infinite;
+  -ms-animation: flyingBalloon 16s -92s linear infinite;
+  -o-animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon74:before {
+  color: #4A89DC;
+}
+
+.balloon75 {
+  background-color: #ffdb5f;
+  left: 3%;
+  animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation: flyingBalloon 17s -92s linear infinite;
+  -moz-animation: flyingBalloon 17s -92s linear infinite;
+  -ms-animation: flyingBalloon 17s -92s linear infinite;
+  -o-animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon75:before {
+  color: #ffdb5f;
+}
+
+.balloon76 {
+  background-color: #ffdb5f;
+  left: 12%;
+  animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation: flyingBalloon 12s -92s linear infinite;
+  -moz-animation: flyingBalloon 12s -92s linear infinite;
+  -ms-animation: flyingBalloon 12s -92s linear infinite;
+  -o-animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon76:before {
+  color: #ffdb5f;
+}
+
+.balloon77 {
+  background-color: #de4044;
+  left: 6%;
+  animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation: flyingBalloon 25s -92s linear infinite;
+  -moz-animation: flyingBalloon 25s -92s linear infinite;
+  -ms-animation: flyingBalloon 25s -92s linear infinite;
+  -o-animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon77:before {
+  color: #de4044;
+}
+
+.balloon78 {
+  background-color: #ffdb5f;
+  left: 19%;
+  animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation: flyingBalloon 9s -92s linear infinite;
+  -moz-animation: flyingBalloon 9s -92s linear infinite;
+  -ms-animation: flyingBalloon 9s -92s linear infinite;
+  -o-animation: flyingBalloon 9s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon78:before {
+  color: #ffdb5f;
+}
+
+.balloon79 {
+  background-color: #4A89DC;
+  left: 9%;
+  animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation: flyingBalloon 8s -92s linear infinite;
+  -moz-animation: flyingBalloon 8s -92s linear infinite;
+  -ms-animation: flyingBalloon 8s -92s linear infinite;
+  -o-animation: flyingBalloon 8s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon79:before {
+  color: #4A89DC;
+}
+
+.balloon80 {
+  background-color: #de4044;
+  left: 19%;
+  animation: flyingBalloon 23s -92s linear infinite;
+  -webkit-animation: flyingBalloon 23s -92s linear infinite;
+  -moz-animation: flyingBalloon 23s -92s linear infinite;
+  -ms-animation: flyingBalloon 23s -92s linear infinite;
+  -o-animation: flyingBalloon 23s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon80:before {
+  color: #de4044;
+}
+
+.balloon81 {
+  background-color: #f1f7bb;
+  left: 5%;
+  animation: flyingBalloon 24s -92s linear infinite;
+  -webkit-animation: flyingBalloon 24s -92s linear infinite;
+  -moz-animation: flyingBalloon 24s -92s linear infinite;
+  -ms-animation: flyingBalloon 24s -92s linear infinite;
+  -o-animation: flyingBalloon 24s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon81:before {
+  color: #f1f7bb;
+}
+
+.balloon82 {
+  background-color: #4A89DC;
+  left: 1%;
+  animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation: flyingBalloon 11s -92s linear infinite;
+  -moz-animation: flyingBalloon 11s -92s linear infinite;
+  -ms-animation: flyingBalloon 11s -92s linear infinite;
+  -o-animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon82:before {
+  color: #4A89DC;
+}
+
+.balloon83 {
+  background-color: #de4044;
+  left: 13%;
+  animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation: flyingBalloon 12s -92s linear infinite;
+  -moz-animation: flyingBalloon 12s -92s linear infinite;
+  -ms-animation: flyingBalloon 12s -92s linear infinite;
+  -o-animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon83:before {
+  color: #de4044;
+}
+
+.balloon84 {
+  background-color: #ffdb5f;
+  left: 17%;
+  animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation: flyingBalloon 11s -92s linear infinite;
+  -moz-animation: flyingBalloon 11s -92s linear infinite;
+  -ms-animation: flyingBalloon 11s -92s linear infinite;
+  -o-animation: flyingBalloon 11s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon84:before {
+  color: #ffdb5f;
+}
+
+.balloon85 {
+  background-color: #4A89DC;
+  left: 20%;
+  animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation: flyingBalloon 12s -92s linear infinite;
+  -moz-animation: flyingBalloon 12s -92s linear infinite;
+  -ms-animation: flyingBalloon 12s -92s linear infinite;
+  -o-animation: flyingBalloon 12s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon85:before {
+  color: #4A89DC;
+}
+
+.balloon86 {
+  background-color: #de4044;
+  left: 7%;
+  animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation: flyingBalloon 16s -92s linear infinite;
+  -moz-animation: flyingBalloon 16s -92s linear infinite;
+  -ms-animation: flyingBalloon 16s -92s linear infinite;
+  -o-animation: flyingBalloon 16s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon86:before {
+  color: #de4044;
+}
+
+.balloon87 {
+  background-color: #4A89DC;
+  left: 13%;
+  animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation: flyingBalloon 25s -92s linear infinite;
+  -moz-animation: flyingBalloon 25s -92s linear infinite;
+  -ms-animation: flyingBalloon 25s -92s linear infinite;
+  -o-animation: flyingBalloon 25s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon87:before {
+  color: #4A89DC;
+}
+
+.balloon88 {
+  background-color: #ffdb5f;
+  left: 20%;
+  animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation: flyingBalloon 7s -92s linear infinite;
+  -moz-animation: flyingBalloon 7s -92s linear infinite;
+  -ms-animation: flyingBalloon 7s -92s linear infinite;
+  -o-animation: flyingBalloon 7s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon88:before {
+  color: #ffdb5f;
+}
+
+.balloon89 {
+  background-color: #f1f7bb;
+  left: 11%;
+  animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation: flyingBalloon 17s -92s linear infinite;
+  -moz-animation: flyingBalloon 17s -92s linear infinite;
+  -ms-animation: flyingBalloon 17s -92s linear infinite;
+  -o-animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon89:before {
+  color: #f1f7bb;
+}
+
+.balloon90 {
+  background-color: #ffdb5f;
+  left: 10%;
+  animation: flyingBalloon 23s -92s linear infinite;
+  -webkit-animation: flyingBalloon 23s -92s linear infinite;
+  -moz-animation: flyingBalloon 23s -92s linear infinite;
+  -ms-animation: flyingBalloon 23s -92s linear infinite;
+  -o-animation: flyingBalloon 23s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon90:before {
+  color: #ffdb5f;
+}
+
+.balloon91 {
+  background-color: #4A89DC;
+  left: 18%;
+  animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation: flyingBalloon 19s -92s linear infinite;
+  -moz-animation: flyingBalloon 19s -92s linear infinite;
+  -ms-animation: flyingBalloon 19s -92s linear infinite;
+  -o-animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon91:before {
+  color: #4A89DC;
+}
+
+.balloon92 {
+  background-color: #f1f7bb;
+  left: 19%;
+  animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation: flyingBalloon 15s -92s linear infinite;
+  -moz-animation: flyingBalloon 15s -92s linear infinite;
+  -ms-animation: flyingBalloon 15s -92s linear infinite;
+  -o-animation: flyingBalloon 15s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon92:before {
+  color: #f1f7bb;
+}
+
+.balloon93 {
+  background-color: #de4044;
+  left: 4%;
+  animation: flyingBalloon 22s -92s linear infinite;
+  -webkit-animation: flyingBalloon 22s -92s linear infinite;
+  -moz-animation: flyingBalloon 22s -92s linear infinite;
+  -ms-animation: flyingBalloon 22s -92s linear infinite;
+  -o-animation: flyingBalloon 22s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon93:before {
+  color: #de4044;
+}
+
+.balloon94 {
+  background-color: #ffdb5f;
+  left: 16%;
+  animation: flyingBalloon 6s -92s linear infinite;
+  -webkit-animation: flyingBalloon 6s -92s linear infinite;
+  -moz-animation: flyingBalloon 6s -92s linear infinite;
+  -ms-animation: flyingBalloon 6s -92s linear infinite;
+  -o-animation: flyingBalloon 6s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  -ms-animation-timing-function: ease-in;
+  -o-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.balloon94:before {
+  color: #ffdb5f;
+}
+
+.balloon95 {
+  background-color: #4A89DC;
+  left: 2%;
+  animation: flyingBalloon 23s -92s linear infinite;
+  -webkit-animation: flyingBalloon 23s -92s linear infinite;
+  -moz-animation: flyingBalloon 23s -92s linear infinite;
+  -ms-animation: flyingBalloon 23s -92s linear infinite;
+  -o-animation: flyingBalloon 23s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon95:before {
+  color: #4A89DC;
+}
+
+.balloon96 {
+  background-color: #4A89DC;
+  left: 15%;
+  animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation: flyingBalloon 19s -92s linear infinite;
+  -moz-animation: flyingBalloon 19s -92s linear infinite;
+  -ms-animation: flyingBalloon 19s -92s linear infinite;
+  -o-animation: flyingBalloon 19s -92s linear infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.balloon96:before {
+  color: #4A89DC;
+}
+
+.balloon97 {
+  background-color: #ffdb5f;
+  left: 4%;
+  animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation: flyingBalloon 14s -92s linear infinite;
+  -moz-animation: flyingBalloon 14s -92s linear infinite;
+  -ms-animation: flyingBalloon 14s -92s linear infinite;
+  -o-animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.balloon97:before {
+  color: #ffdb5f;
+}
+
+.balloon98 {
+  background-color: #4A89DC;
+  left: 6%;
+  animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation: flyingBalloon 17s -92s linear infinite;
+  -moz-animation: flyingBalloon 17s -92s linear infinite;
+  -ms-animation: flyingBalloon 17s -92s linear infinite;
+  -o-animation: flyingBalloon 17s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon98:before {
+  color: #4A89DC;
+}
+
+.balloon99 {
+  background-color: #ffdb5f;
+  left: 19%;
+  animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation: flyingBalloon 14s -92s linear infinite;
+  -moz-animation: flyingBalloon 14s -92s linear infinite;
+  -ms-animation: flyingBalloon 14s -92s linear infinite;
+  -o-animation: flyingBalloon 14s -92s linear infinite;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.balloon99:before {
+  color: #ffdb5f;
+}
+
+@-webkit-keyframes flyingBalloon {
+  from {
+    bottom: -20%;
+  }
+  to {
+    bottom: 110%;
+  }
+}
+
+@-moz-keyframes flyingBalloon {
+  from {
+    bottom: -20%;
+  }
+  to {
+    bottom: 110%;
+  }
+}
+
+@-ms-keyframes flyingBalloon {
+  from {
+    bottom: -20%;
+  }
+  to {
+    bottom: 110%;
+  }
+}
+
+@-o-keyframes flyingBalloon {
+  from {
+    bottom: -20%;
+  }
+  to {
+    bottom: 110%;
+  }
+}
+
+@keyframes flyingBalloon {
+  from {
+    bottom: -20%;
+  }
+  to {
+    bottom: 110%;
+  }
+}
