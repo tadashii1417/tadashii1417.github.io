@@ -1,53 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thai Thanh Phuong</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Thai Thanh Phuong</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-    />
-    <link rel="stylesheet" href="./balloon.css" />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="element element-1"></div>
-    <div class="element element-2"></div>
-    <div class="element element-3"></div>
-    <div class="element element-4"></div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+        <link rel="stylesheet" href="./balloon.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="element element-1"></div>
+        <div class="element element-2"></div>
+        <div class="element element-3"></div>
+        <div class="element element-4"></div>
 
-    <!-- <div class="balloons"></div> -->
-    <div class="balloon">
-      <div><span class="small-icon">🙆🏻‍♀️</span></div>
-      <div><span class="small-icon">🙆‍♂️</span></div>
-      <div><span>🦦</span></div>
-      <div><span>🦭</span></div>
-      <div><span class="small-icon">❤️</span></div>
-      <div><span>!</span></div>
-      <span>&nbsp;</span>
-    </div>
-
-    <div class=main-area>
-        <div>
-            <img src="./phuong.jpeg" alt="image" id="image">
+        <!-- <div class="balloons"></div> -->
+        <div class="balloon">
+            <div><span class="small-icon">🙆🏻‍♀️</span></div>
+            <div><span class="small-icon">🙆‍♂️</span></div>
+            <div><span>🦦</span></div>
+            <div><span>🦭</span></div>
+            <div><span class="small-icon">❤️</span></div>
+            <div><span>!</span></div>
+            <span>&nbsp;</span>
         </div>
-      <div class="title">Happy Birthday</div>
-      <div class="cake-container">
-          <div class="cake">
-            <div class="velas">
-              <div class="fuego"></div>
-              <div class="fuego"></div>
-              <div class="fuego"></div>
-              <div class="fuego"></div>
-              <div class="fuego"></div>
+
+        <div class="main-area">
+            <div>
+                <img src="./phuong.jpeg" alt="image" id="image" />
             </div>
-            <div class="cobertura"></div>
-            <div class="bizcocho"></div>
-          </div>
-      </div>
-    </div>
-  </body>
+            <div class="title">Happy Birthday</div>
+            <!-- <div class="title">🩷</div> -->
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="velas">
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                    </div>
+                    <div class="cobertura"></div>
+                    <div class="bizcocho"></div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var image = document.getElementById('image');
+            var currentPos = 0;
+            var images = [
+                './phuong.jpeg',
+                './phuong2.jpeg',
+                'https://instagram.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/375455497_18271073593153871_1374949915418440490_n.jpg?stp=dst-jpg_e35_p1080x1080_sh0.08&_nc_ht=instagram.fsgn5-15.fna.fbcdn.net&_nc_cat=111&_nc_ohc=tUeNkMSPxa8AX_uBEW1&edm=ACWDqb8AAAAA&ccb=7-5&ig_cache_key=MzE4NDk5NDY5MTA4NTkyMjQ1Ng%3D%3D.2-ccb7-5&oh=00_AfAPz10Ve5P-FLGyYC-IVldXa3XN9Yv5divOrn5poN1kXQ&oe=65050FF7&_nc_sid=ee9879',
+            ];
+
+            function volgendefoto() {
+                if (++currentPos >= images.length) currentPos = 0;
+
+                image.src = images[currentPos];
+            }
+
+            setInterval(volgendefoto, 3000);
+        </script>
+    </body>
 </html>
