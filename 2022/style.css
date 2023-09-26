@@ -532,12 +532,13 @@ body,
 html {
     height: 100%;
     font-family: 'Dancing Script', cursive;
-    background-color: #212121;
 }
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #212534;
+    box-sizing: border-box;
 }
 .title {
     font-size: 4rem;
@@ -722,10 +723,6 @@ body {
     width: 100%;
 }
 
-.images {
-    margin-top: 100px;
-}
-
 .main-area > * {
     padding: 20px 0;
 }
@@ -733,20 +730,14 @@ body {
     margin-top: 24px;
     position: relative;
 }
-#image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    padding: 4px;
-    border: 1px solid white;
-}
+
 .title {
     user-select: none;
     background: -webkit-linear-gradient(yellow, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
 
-    /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+.card {
+    margin-top: 100px;
 }

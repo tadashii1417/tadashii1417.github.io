@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
         <link rel="stylesheet" href="./balloon.css" />
         <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./image.css" />
     </head>
     <body>
         <div class="element element-1"></div>
@@ -27,9 +28,10 @@
                 <!-- <span>&nbsp;</span> -->
             </div>
 
-            <div class="images">
+            <div class="card2">
                 <img src="./phuong.jpeg" alt="image" id="image" />
             </div>
+
             <div class="title">Happy Birthday</div>
             <div class="cake-container">
                 <div class="cake">
@@ -49,10 +51,7 @@
         <script type="text/javascript">
             var image = document.getElementById('image');
             var currentPos = 0;
-            var images = [
-                './phuong.jpeg',
-                './phuong2.jpeg'
-            ];
+            var images = ['./phuong.jpeg', './phuong2.jpeg'];
 
             function volgendefoto() {
                 if (++currentPos >= images.length) currentPos = 0;
