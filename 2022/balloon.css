@@ -87,18 +87,7 @@
     -o-animation: balloon2 3s ease-in-out infinite;
     animation: balloon2 3s ease-in-out infinite;
   }
-  /* .balloon > div:nth-child(6):before {
-    color: rgba(242, 194, 58, 0.9);
-  } */
-  /* .balloon > div:before {
-    color: rgba(182, 15, 97, 0.9);
-    position: absolute;
-    bottom: -11px;
-    left: 52px;
-    content: "▲";
-    font-size: 1em;
-  } */
-  span {
+  .balloon span {
     font-size: 4.8em;
     color: white;
     position: relative;
@@ -256,5 +245,5 @@
   }
 
 .small-icon {
-  font-size: 4em;
+  font-size: 4em !important;
 }

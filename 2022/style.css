@@ -531,7 +531,7 @@
 body,
 html {
     height: 100%;
-    font-family: 'Dancing Script', cursive, "Times New Roman", Times, serif;;
+    font-family: "Times New Roman", Times, serif;;
     position: relative;
 }
 body {
@@ -814,4 +814,18 @@ svg .st3 {
     100% {
         transform: translate(-50%, -50%) rotate(0);
     }
+}
+
+.lyrics {
+    color: white;
+    position: absolute !important;
+    top: 10px;
+    background-color: transparent !important;
+    color: white;
+    border: none !important;
+}
+
+.rabbit-lyrics__inline {
+    font-size: 15px;
+    line-height: 10px;
 }
