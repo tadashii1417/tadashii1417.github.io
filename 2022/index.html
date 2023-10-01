@@ -182,8 +182,9 @@
         <audio src="music.mp3" id="my_audio" loop="loop"></audio>
 
         <script type="text/javascript">
+            var box = document.getElementById('a');
             var banner = document.getElementById('banner');
-            banner.addEventListener('click', () => {
+            box.addEventListener('click', () => {
                 banner.style.display = 'none';
                 document.getElementById('my_audio').play();
             });
@@ -197,10 +198,8 @@
                 './phuong.jpeg',
                 './phuong5.jpeg',
                 './phuong6.jpeg',
-                './phuong7.jpeg',
                 './phuong8.jpeg',
             ];
-
             function volgendefoto() {
                 if (++currentPos >= images.length) currentPos = 0;
                 image.src = images[currentPos];
